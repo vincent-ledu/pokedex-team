@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #f5f6fa;
+  color: #1a1a1a;
+}
+
+body {
+  margin: 0;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #ffcb05, #3b4cca);
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.page-header p {
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+main {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2.5rem -1.5rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 1.75rem 3rem -2rem rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: rgba(59, 76, 202, 0.04);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #3b4cca;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #101321;
+    color: #f5f6fa;
+  }
+
+  .card {
+    background-color: #171b2d;
+  }
+
+  .card img {
+    background-color: rgba(255, 203, 5, 0.07);
+  }
+}
